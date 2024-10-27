@@ -126,7 +126,7 @@
             <div class="w-3/6 text-right">
               <img
                 src="./assets/banner.png"
-                class="max-w-xs md:max-w-md rounded-lg text-right mx-auto"
+                class="max-w-xs md:max-w-sm rounded-lg text-right mx-auto"
               />
             </div>
             <div class="w-4/6 text-center md:text-left">
@@ -151,10 +151,10 @@
       </div>
     </header>
     <main>
-      <section id="inputForm" class="my-40">
-        <div class="containern">
-          <div class="flex flex-col items-center justify-center min-h-screen bg-gray-50">
-            <div class="flex w-full max-w-4xl p-6 bg-white rounded-lg shadow-md gap-4 flex-col-reverse md:flex-row">
+      <section id="inputForm" class="mt-12">
+        <div class=" bg-gray-100 py-8">
+          <div class="flex flex-col items-center justify-center min-h-screen containern">
+            <div class="flex w-full max-w-6xl p-6 bg-white rounded-lg shadow-md gap-4 flex-col-reverse md:flex-row">
                 
                 <!-- Left Section: Instructions -->
                 <div class="w-full md:w-1/3 p-4 bg-navBg rounded-lg pt-10">
@@ -188,8 +188,10 @@
                     <textarea 
                         placeholder="Type or paste your text here..." 
                         rows="10" 
+                        id="textInput"
                         class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-                        maxlength="10000">
+                        maxlength="1000"
+                        oninput="updateCharacterCount()">
                     </textarea>
                     
                     <div class="flex items-center justify-between mt-4">
@@ -203,11 +205,11 @@
                         </label>
                         
                         <!-- Character Count -->
-                        <span class="text-sm text-gray-500">0/1000</span>
+                        <span id="charCount" class="text-sm text-gray-500">0/1000</span>
                     </div>
                     
                     <!-- Scan Button -->
-                    <button class="w-full mt-4 p-3 bg-btnColor text-white font-semibold rounded-lg hover:bg-primaryColor">
+                    <button  class="w-full mt-4 p-3 bg-btnColor text-white font-semibold rounded-lg hover:bg-primaryColor">
                         Scan for plagiarism
                     </button>
                 </div>
@@ -221,6 +223,50 @@
 
         </div>
       </section>
+
+      <footer>
+        <div class=" bg-neutral text-white p-10">
+          <div class="containern footer py-5">
+            <aside>
+              <img class="max-w-60" src="./assets/sotota checker logo.png" alt="">
+              <p>
+                ACME Industries Ltd.
+                <br />
+                Providing reliable tech since 1992
+              </p>
+            </aside>
+            <nav>
+              <h6 class="footer-title">Services</h6>
+              <a class="link link-hover">Branding</a>
+              <a class="link link-hover">Design</a>
+              <a class="link link-hover">Marketing</a>
+              <a class="link link-hover">Advertisement</a>
+            </nav>
+            <nav>
+              <h6 class="footer-title">Company</h6>
+              <a class="link link-hover">About us</a>
+              <a class="link link-hover">Contact</a>
+              <a class="link link-hover">Jobs</a>
+              <a class="link link-hover">Press kit</a>
+            </nav>
+            <nav>
+              <h6 class="footer-title">Legal</h6>
+              <a class="link link-hover">Terms of use</a>
+              <a class="link link-hover">Privacy policy</a>
+              <a class="link link-hover">Cookie policy</a>
+            </nav>
+          </div>
+        </div>
+      </footer>
     </main>
+
+    <script>
+      // JavaScript function to update the character count
+      function updateCharacterCount() {
+          const textInput = document.getElementById("textInput");
+          const charCount = document.getElementById("charCount");
+          charCount.textContent = `${textInput.value.length}/10000`;
+      }
+  </script>
   </body>
 </html>
