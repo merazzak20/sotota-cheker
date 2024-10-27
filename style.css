@@ -1,0 +1,12 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background-color: #e9f5ed;
+  z-index: 99;
+}

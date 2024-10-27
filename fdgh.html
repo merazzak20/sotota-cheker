@@ -1,0 +1,50 @@
+<div class="flex-1">
+  <h2 class="text-lg font-semibold text-gray-700 mb-4">
+    Enter text or upload file to check for plagiarism and writing errors.
+  </h2>
+
+  <!-- Text Area -->
+  <textarea
+    placeholder="Type or paste your text here..."
+    rows="10"
+    id="textInput"
+    class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+    maxlength="1000"
+    oninput="updateCharacterCount()"
+  >
+  </textarea>
+
+  <div class="flex items-center justify-between mt-4">
+    <!-- File Upload Button -->
+    <label
+      class="flex items-center space-x-2 cursor-pointer text-primaryColor hover:text-primaryColor"
+    >
+      <input type="file" class="hidden" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M3 16l4 4m0 0l4-4m-4 4V4m6 0a2 2 0 00-2 2v14a2 2 0 002 2h8a2 2 0 002-2V6a2 2 0 00-2-2h-8z"
+        />
+      </svg>
+      <span>Upload a file</span>
+    </label>
+
+    <!-- Character Count -->
+    <span id="charCount" class="text-sm text-gray-500">0/1000</span>
+  </div>
+
+  <!-- Scan Button -->
+  <button
+    class="w-full mt-4 p-3 bg-btnColor text-white font-semibold rounded-lg hover:bg-primaryColor"
+  >
+    Scan for plagiarism
+  </button>
+</div>
