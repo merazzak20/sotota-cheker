@@ -4,6 +4,223 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sotota Cheker</title>
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+
+    <!-- DaisyUI and Talwind CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .lexend {
+        font-family: "Lexend", sans-serif;
+      }
+      .containern {
+        width: 90%;
+        margin: 0 auto;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              navBg: "#e9f5ed",
+              primaryColor: "#37b4a3",
+              btnColor: "#0f7c66",
+              bColor: "rgb(171, 239, 95)",
+              fColor: "#1C1C1C",
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav class="bg-navBg">
+        <div class="navbar containern py-4">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h7"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <li><a>Homepage</a></li>
+                <li><a>Portfolio</a></li>
+                <li><a>About</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="navbar-center">
+            <a class=""
+              ><img class="w-28" src="./assets/sotota checker logo.png" alt=""
+            /></a>
+          </div>
+          <div class="navbar-end">
+            <button class="btn btn-ghost btn-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+            <button class="btn btn-ghost btn-circle">
+              <div class="indicator">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                  />
+                </svg>
+                <span
+                  class="badge badge-xs badge-primary indicator-item"
+                ></span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <div class="hero pt-7">
+        <div class="hero min-h-80 containern relative">
+          <div
+            class="hero-content flex-col lg:flex-row-reverse w-full justify-between items-center"
+          >
+            <div class="w-3/6 text-right">
+              <img
+                src="./assets/banner.png"
+                class="max-w-xs md:max-w-md rounded-lg text-right mx-auto"
+              />
+            </div>
+            <div class="w-4/6 text-center md:text-left">
+              <h1 class="text-5xl text-primaryColor font-bold">
+                Welcome to SATATA CHECKER
+              </h1>
+              <p class="py-6">
+                Welcome to Satata Checker, a comprehensive solution designed to
+                help writers, students, and professionals ensure their work is
+                authentic and free from plagiarism. At Satata Checker, we
+                believe in upholding the integrity of original content. Our
+                advanced technology scans across vast databases to deliver
+                accurate, reliable results so you can be confident in the
+                originality of your work.
+              </p>
+              <button class="btn bg-btnColor text-white hover:bg-primaryColor">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="inputForm" class="my-40">
+        <div class="containern">
+          <div class="flex flex-col items-center justify-center min-h-screen bg-gray-50">
+            <div class="flex w-full max-w-4xl p-6 bg-white rounded-lg shadow-md gap-4 flex-col-reverse md:flex-row">
+                
+                <!-- Left Section: Instructions -->
+                <div class="w-full md:w-1/3 p-4 bg-navBg rounded-lg pt-10">
+                  <div>
+                    <h3 class="text-lg font-bold text-btnColor mb-4">Let's get started.</h3>
+                  <ul class="space-y-2 text-gray-600">
+                      <li><strong>Step 1:</strong> Add your text or upload a file.</li>
+                      <li><strong>Step 2:</strong> Click to scan for plagiarism.</li>
+                      <li><strong>Step 3:</strong> Review the results for instances of potential plagiarism, plus additional writing issues.</li>
+                  </ul>
+                  </div>
+      
+                  <!-- Additional Button (Optional) -->
+                  <div class="mt-5">
+                    <button class="mt-4 w-full p-3 bg-primaryColor text-white font-semibold rounded-lg hover:bg-btnColor">
+                      Get Grammarly
+                  </button>
+                  
+                  <!-- Login Link -->
+                  <p class="mt-2 text-center text-sm text-gray-500">
+                      Already have an account? <a href="#" class="text-blue-600 hover:underline">Log in</a>
+                  </p>
+                  </div>
+              </div>
+
+                <!-- Right Section: Input Area -->
+                <div class="flex-1">
+                    <h2 class="text-lg font-semibold text-gray-700 mb-4">Enter text or upload file to check for plagiarism and writing errors.</h2>
+                    
+                    <!-- Text Area -->
+                    <textarea 
+                        placeholder="Type or paste your text here..." 
+                        rows="10" 
+                        class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                        maxlength="10000">
+                    </textarea>
+                    
+                    <div class="flex items-center justify-between mt-4">
+                        <!-- File Upload Button -->
+                        <label class="flex items-center space-x-2 cursor-pointer text-primaryColor hover:text-primaryColor">
+                            <input type="file" class="hidden" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 16l4 4m0 0l4-4m-4 4V4m6 0a2 2 0 00-2 2v14a2 2 0 002 2h8a2 2 0 002-2V6a2 2 0 00-2-2h-8z" />
+                            </svg>
+                            <span>Upload a file</span>
+                        </label>
+                        
+                        <!-- Character Count -->
+                        <span class="text-sm text-gray-500">0/1000</span>
+                    </div>
+                    
+                    <!-- Scan Button -->
+                    <button class="w-full mt-4 p-3 bg-btnColor text-white font-semibold rounded-lg hover:bg-primaryColor">
+                        Scan for plagiarism
+                    </button>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+          
+        </div>
+
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
