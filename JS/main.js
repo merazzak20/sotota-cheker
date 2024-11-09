@@ -9,15 +9,17 @@ window.addEventListener("scroll", function () {
 });
 
 // JavaScript function to update the character count
+const textInput = document.getElementById("textInput");
+const charCount = document.getElementById("couter");
 
+let count = 0;
 function updateCharacterCount() {
-  const textInput = document.getElementById("textInput");
-  const charCount = document.getElementById("charCount");
-
-  // Update character count dynamically
-  charCount.textContent = `${textInput.value.length}/1000`;
+  const inputValue = textInput.value.length;
+  charCount.innerText = inputValue;
 }
+textInput.addEventListener("keyup", () => updateCharacterCount());
 
+// Plagiarism BTN
 document.getElementById("btnPlagiarism").addEventListener("click", function () {
   const textInput = document.getElementById("textInput").value;
   const resultField = document.getElementById("resultField");
@@ -31,4 +33,9 @@ document.getElementById("btnPlagiarism").addEventListener("click", function () {
   resultField.append(textInput);
 });
 
-updateCharacterCount();
+// copyText BTN
+const copyText = () => {
+  textInput.select();
+  textInput.setSelectionRange(0, 10000); //Mobile virsion
+  navigator.clipboard.writeText(textInput.value); //copy text from textarea
+};
