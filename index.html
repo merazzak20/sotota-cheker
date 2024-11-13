@@ -182,13 +182,18 @@
                     
                     <!-- Scan Button -->
                     <div class="flex gap-2">
-                      <button id="btnPlagiarism" class="w-1/2 mt-4 p-3 bg-btnColor text-white font-semibold rounded-lg hover:bg-primaryColor">
+                      <!-- <button id="btnPlagiarism" class="w-1/2 mt-4 p-3 bg-btnColor text-white font-semibold rounded-lg hover:bg-primaryColor">
                         Scan for plagiarism
-                    </button>
+                    </button> -->
+                    <button id="checkGrammar" class="w-1/2 mt-4 p-3 bg-btnColor text-white font-semibold rounded-lg hover:bg-primaryColor">
+                      Grammar check
+                  </button>
                     <button onclick="copyText()" class="w-1/2 mt-4 p-3 bg-primaryColor text-white font-semibold rounded-lg hover:bg-btnColor">
                         Copy Text
                     </button>
                     </div>
+                    
+                  <div id="output"></div>
                 </div>
                 
                 
@@ -272,8 +277,7 @@
       </div>
     </footer>
 
-    <script src="./JS/main.js">
-      
-  </script>
+    <script src="./JS/main.js"></script>
+    <script src="./JS/grammar.js"></script>
   </body>
 </html>
