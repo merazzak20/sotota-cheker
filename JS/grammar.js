@@ -7,7 +7,8 @@ async function checkGrammar() {
   const output = document.getElementById("output");
 
   if (!textInput) {
-    output.innerText = "Please enter text to check.";
+    output.innerText = `Please enter text to check.`;
+
     return;
   }
 
